@@ -1,0 +1,20 @@
+<%- include('./index.ejs') %>
+
+<body>
+    <main class="main">
+        <section class="boxes">
+            <%artistData.forEach(element=>{%>
+            <article class="articles"> <% if (element.images.length!=0) { %>
+                <img src="<%=element.images[0].url%>" alt=“”>
+                <% } else{ %>
+                <img src="/public/images/noneimg.jpeg" alt="">
+                <% } %>
+                <div>
+                    <h1><%=element.name%> </h1>
+                    <a class="btn" href="/albums/<%=element.id%>">View Album</a>
+                </div>
+            </article>
+            <%})%>
+        </section>
+    </main>
+</body>

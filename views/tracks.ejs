@@ -1,0 +1,14 @@
+<%- include('./index.ejs') %>
+
+<body>
+    <main class="main">
+        <section id="player">
+            <% tracksData.forEach(element => { %>
+            <div>
+                <h3><%= element.name %> </h3>
+                <audio controls src="<%= element.preview_url %> "></audio>
+            </div>
+            <% }) %>
+        </section>
+    </main>
+</body>

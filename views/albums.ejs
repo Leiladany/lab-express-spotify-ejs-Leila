@@ -1,0 +1,17 @@
+<%- include('./index.ejs') %>
+
+<body>
+    <main class="main">
+        <section class="boxes">
+            <%albumsData.forEach(element=>{%>
+            <article class="articles">
+                <img src="<%=element.images[0].url%>" alt=“”>
+                <div>
+                    <h1><%=element.name%> </h1>
+                    <a class="btn" href="/tracks/<%=element.id%>">View Tracks</a>
+                </div>
+            </article>
+            <%})%>
+        </section>
+    </main>
+</body>
